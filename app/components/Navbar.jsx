@@ -1,3 +1,4 @@
+
 'use client'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -8,30 +9,31 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-black w-screen text-white p-5 flex justify-between items-center">
-      <div>
-        <Link className="text-white font-bold text-lg sm:text-2xl md:text-4xl" href="/">Burgary</Link>
-      </div>
+    <nav className="bg-black w-full text-white px-5 py-4 flex justify-between items-center relative z-50">
+      {/* Logo */}
+      <Link href="/" className="font-bold text-xl sm:text-2xl md:text-4xl">
+        Burgary
+      </Link>
 
-      {/* Hamburger Icon */}
+      {/* Hamburger (mobile) */}
       <div className="md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Menu">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex gap-10 items-center text-2xl">
+      {/* Desktop Links */}
+      <div className="hidden md:flex gap-8 items-center text-xl">
         <Link href="/">Home</Link>
         <Link href="/about">About Us</Link>
         <Link href="/menu">Menu</Link>
         <Link href="/contact">Contact</Link>
-        <Button />
+        <Button content="shop now"/>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-19 left-0 w-full bg-black flex flex-col items-center gap-4 sm:gap-6 text-lg sm:text-2xl py-5 md:hidden">
+        <div className="absolute top-full left-0 w-full bg-black flex flex-col items-center gap-4 text-lg py-6 shadow-md md:hidden transition-all duration-300 ease-in-out">
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
           <Link href="/menu" onClick={() => setIsOpen(false)}>Menu</Link>
