@@ -4,6 +4,8 @@ import Image from 'next/image'
 import burger from '../public/burger_home.png'
 import burger2 from '../public/burger_home2.png'
 import Button from './components/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUtensils, faDroplet, faLeaf } from '@fortawesome/free-solid-svg-icons'
 
 const Page = () => {
   return (
@@ -40,6 +42,20 @@ const Page = () => {
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
             Cum sociis natoque penatibus et magnis dis parturient montes.
           </p>
+          <div className='hidden sm:flex justify-start gap-25 mb-10'>
+          <div>
+         <FontAwesomeIcon icon={faUtensils} className='text-sm text-amber-400 h-6 m-4' />
+         <p className='text-white'>Delicious</p>
+          </div>
+            <div>
+         <FontAwesomeIcon icon={faDroplet} className='text-sm text-amber-400 h-6 m-4' />
+         <p className='text-white'>Fresh</p>
+          </div>
+            <div>
+         <FontAwesomeIcon icon={faLeaf} className='text-sm text-amber-400 h-6 m-4' />
+         <p className='text-white'>Organic</p>
+          </div>
+          </div>
           <Button content='Learn more' />
         </div>
       </div>

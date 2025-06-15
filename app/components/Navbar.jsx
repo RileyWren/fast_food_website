@@ -23,7 +23,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex gap-8 items-center text-xl">
+      <div className="hidden md:flex gap-8 items-center text-lg">
         <Link href="/">Home</Link>
         <Link href="/about">About Us</Link>
         <Link href="/menu">Menu</Link>
