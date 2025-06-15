@@ -6,7 +6,7 @@ import Button from './Button'
 const Navbar = () => {
   return (
     <>
-        <nav className='flex justify-between p-5'>
+        <nav className='flex justify-between p-10'>
             <div>
                 <Link className='text-white font-bold text-2xl m-5' href='/'>Burgary</Link>
                 </div>
