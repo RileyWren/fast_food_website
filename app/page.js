@@ -6,6 +6,7 @@ import burger2 from '../public/burger_home2.png'
 import Button from './components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils, faDroplet, faLeaf } from '@fortawesome/free-solid-svg-icons'
+import TopProduct from './components/TopProduct'
 
 const Page = () => {
   return (
@@ -59,6 +60,8 @@ const Page = () => {
           <Button content='Learn more' />
         </div>
       </div>
+
+      <TopProduct />
     </div>
   )
 }
