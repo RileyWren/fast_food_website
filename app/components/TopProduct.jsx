@@ -73,20 +73,20 @@ const products = [
     name: 'FOOD',
     desc: 'Lorem ipsum dolor sit.',
     img: burger3,
-    bg: 'bg-yellow-500',
+    bg: 'bg-gray-500',
   },
   {
     name: 'SNACK',
     desc: 'Lorem ipsum dolor sit.',
     img: fries,
-    bg: 'bg-green-700',
+    bg: 'bg-gray-500',
   },
-  {
-    name: 'Smoothie',
-    desc: 'Lorem ipsum dolor sit.',
-    img: smothie,
-    bg: 'bg-red-500',
-  },
+  // {
+  //   name: 'Smoothie',
+  //   desc: 'Lorem ipsum dolor sit.',
+  //   img: smothie,
+  //   bg: 'bg-red-500',
+  // },
 ]
 
 const TopProduct = () => {
