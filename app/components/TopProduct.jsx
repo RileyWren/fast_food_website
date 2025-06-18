@@ -63,7 +63,6 @@
 
 // export default TopProduct
 
-
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -82,19 +81,19 @@ const products = [
     name: 'Buy 1 Coke, Get 1 Free!',
     desc: 'Limited time offer. Refresh your meal with a free coke — no extra charge!',
     img: fries,
-    bg: 'bg-neutral-800',
+    bg: 'bg-neutral-900',
   },
 ]
 
 const TopProduct = () => {
   return (
-    <section className="flex flex-col gap-6 px-4 py-8 md:px-16">
+    <section className="flex flex-col md:flex-row gap-6 px-4 py-8 md:px-16">
       {products.map((product, index) => (
         <div
           key={index}
-          className={`flex flex-col md:flex-row items-center md:items-stretch rounded-2xl ${product.bg} overflow-hidden shadow-lg transition hover:scale-[1.01]`}
+          className={`flex flex-col md:flex-row items-center md:items-stretch rounded-2xl ${product.bg} overflow-hidden shadow-lg transition hover:scale-[1.01] w-full md:w-1/2`}
         >
-          <div className="w-full md:w-[40%] h-64 md:h-auto relative">
+          <div className="w-full md:w-1/2 h-64 md:h-auto relative">
             <Image
               src={product.img}
               alt={product.name}
@@ -102,7 +101,7 @@ const TopProduct = () => {
               className="object-cover"
             />
           </div>
-          <div className="w-full md:w-[60%] p-6 flex flex-col justify-center gap-2">
+          <div className="w-full md:w-1/2 p-6 flex flex-col justify-center gap-2">
             <span className="text-yellow-400 uppercase text-sm font-semibold tracking-wider">
               Promo Offer
             </span>

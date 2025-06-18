@@ -7,6 +7,8 @@ import Button from './components/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUtensils, faDroplet, faLeaf } from '@fortawesome/free-solid-svg-icons'
 import TopProduct from './components/TopProduct'
+import HeroSplit from './components/HeroSplit'
+import MenuGrid from './components/MenuGrid'
 
 const Page = () => {
   return (
@@ -62,6 +64,8 @@ const Page = () => {
       </div>
 
       <TopProduct />
+      <HeroSplit />
+      <MenuGrid />
     </div>
   )
 }
