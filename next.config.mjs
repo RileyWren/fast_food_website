@@ -7,20 +7,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: [
+      'www.theatomicburger.com',
+      'www.burgerandsauce.com',
+      'cdn.prod.website-files.com',
+      'cdn-icons-png.flaticon.com',
+    ],
+    // Alternatively, you can use remotePatterns (newer approach)
+    /*
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.theatomicburger.com',
+        hostname: '**.theatomicburger.com',
       },
       {
         protocol: 'https',
-        hostname: 'www.burgerandsauce.com',
+        hostname: '**.burgerandsauce.com',
       },
       {
         protocol: 'https',
         hostname: 'cdn.prod.website-files.com',
       },
     ],
+    */
   },
 };
 
