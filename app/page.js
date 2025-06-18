@@ -9,6 +9,10 @@ import { faUtensils, faDroplet, faLeaf } from '@fortawesome/free-solid-svg-icons
 import TopProduct from './components/TopProduct'
 import HeroSplit from './components/HeroSplit'
 import MenuGrid from './components/MenuGrid'
+import HeroVideoSection from './components/HeroVideoSection'
+import CustomerReview from './components/CustomerReview'
+import SpecialOfferSection from './components/SpecialOfferSection'
+import Footer from './components/Footer'
 
 const Page = () => {
   return (
@@ -66,6 +70,10 @@ const Page = () => {
       <TopProduct />
       <HeroSplit />
       <MenuGrid />
+      <HeroVideoSection />
+      <CustomerReview />
+      <SpecialOfferSection />
+      <Footer/>
     </div>
   )
 }
