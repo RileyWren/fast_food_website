@@ -4,11 +4,12 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Navbar from '../components/Navbar.jsx';
 
 export default function AboutSection() {
   return (
     <div className="bg-black text-white">
-
+      <Navbar />
       {/* Top Section with Background Image */}
       <div className="relative w-full h-[600px] flex items-center justify-center text-center">
         <Image
