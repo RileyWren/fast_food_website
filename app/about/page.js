@@ -9,14 +9,14 @@ import Navbar from '../components/Navbar.jsx';
 export default function AboutSection() {
   return (
     <div className="bg-black text-white">
-      <Navbar />
       {/* Top Section with Background Image */}
-      <div className="relative w-full h-[600px] flex items-center justify-center text-center">
+      <Navbar />
+      <div className="relative w-full h-[500px] bottom-20 flex items-center justify-center text-center">
         <Image
           src="/background_burger.png" // <- Add this image to /public folder
           alt="Background"
           fill
-          className="object-cover opacity-80"
+          className="object-cover opacity-70"
         />
         <div className="relative z-10 max-w-3xl px-4">
           <h2 className="text-4xl font-extrabold mb-4">
