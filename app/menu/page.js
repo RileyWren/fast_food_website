@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Navbar from '../components/Navbar.jsx';
+import TopProduct from '../components/TopProduct.jsx';
+import Footer from '../components/Footer.jsx';
  const products = [
   {
     name: 'REGULAR BEEF BURGER',
@@ -167,7 +169,8 @@ export default function page() {
              ))}
            </div>
          </div>
-
+             <TopProduct />
+             <Footer />
     </div>
   );
 }
