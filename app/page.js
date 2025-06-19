@@ -70,7 +70,7 @@ const Page = () => {
       <TopProduct />
       <HeroSplit />
       <MenuGrid />
-      <HeroVideoSection />
+      {/* <HeroVideoSection /> */}
       <CustomerReview />
       <SpecialOfferSection />
       <Footer/>

@@ -1,6 +1,4 @@
-// components/HeroVideoSection.js
 import React from 'react';
-// import video from "../../public/burger_video.mp4"
 
 export default function HeroVideoSection() {
   return (
@@ -8,7 +6,7 @@ export default function HeroVideoSection() {
       {/* Video background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/burger_video_fixed.mp4" // <-- put your file in public folder as 'video.mp4'
+        src="/burger_video_fixed.mp4" 
         autoPlay
         loop
         muted

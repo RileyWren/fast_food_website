@@ -67,7 +67,6 @@ const Footer = () => {
             <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 5.707a.999.999 0 010 1.414L11.414 14.414a.999.999 0 01-1.414 0l-2.293-2.293a.999.999 0 011.414-1.414L10 12.586l3.293-3.293a.999.999 0 011.414 0zM12 4a8 8 0 00-8 8 8 8 0 008 8 8 8 0 008-8 8 8 0 00-8-8zm0 12a4 4 110-8 4 4 0 000 8z"/></svg>
             </a>
-            {/* Tripadvisor - using a generic star for now */}
             <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.538 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.783.57-1.838-.197-1.538-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.92 8.72a1 1 0 01.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />

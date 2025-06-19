@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -14,7 +12,7 @@ export default function Page() {
       <Navbar />
       <div className="relative w-full h-[500px] bottom-20 flex items-center justify-center text-center">
         <Image
-          src="/contact_img.png" // <- Add this image to /public folder
+          src="/contact_img.png" 
           alt="Background"
           fill
           className="object-cover opacity-70"

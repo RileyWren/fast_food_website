@@ -1,30 +1,3 @@
-// // /** @type {import('next').NextConfig} */
-// // const nextConfig = {};
-
-// // export default nextConfig;
-
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   images: {
-//     domains: [
-//       'www.theatomicburger.com',
-//       'www.burgerandsauce.com',
-//       'cdn.prod.website-files.com',
-//       'cdn-icons-png.flaticon.com',
-//       'png.pngtree.com',
-//       'www.nicepng.com',
-
-//     ],
-//   },
-// };
-
-// export default nextConfig;
-
-
-
-
-
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

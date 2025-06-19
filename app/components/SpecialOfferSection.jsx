@@ -1,5 +1,4 @@
-// components/SpecialOfferSection.jsx
-'use client'; // This directive is necessary for client-side components in Next.js 13+
+'use client'; 
 
 import React from 'react';
 import { motion } from 'framer-motion';

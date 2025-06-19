@@ -13,7 +13,7 @@ export default function Page() {
       <Navbar />
       <div className="relative w-full h-[500px] bottom-20 flex items-center justify-center text-center">
         <Image
-          src="/background_burger.png" // <- Add this image to /public folder
+          src="/background_burger.png" 
           alt="Background"
           fill
           className="object-cover opacity-70"

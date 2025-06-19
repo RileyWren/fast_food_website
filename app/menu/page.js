@@ -108,7 +108,7 @@ export default function Page() {
       <Navbar />
       <div className="relative w-full h-[400px] bottom-20 flex items-center justify-center text-center">
         <Image
-          src="/background_burger.png" // <- Add this image to /public folder
+          src="/background_burger.png" // 
           alt="Background"
           fill
           className="object-cover opacity-70"
@@ -128,11 +128,7 @@ export default function Page() {
          <div className="bg-black text-white py-12 px-6">
            <div className="text-center">
              <div className="w-16 h-1 bg-yellow-400 mx-auto mt-2 mb-6"></div>
-             {/* <div className="flex justify-center gap-4 my-8">
-               <button className="bg-yellow-400 text-black font-semibold py-2 px-4 rounded">Food</button>
-               <button className="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded">Snack</button>
-               <button className="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded">Beverage</button>
-             </div> */}
+   
              <div className="flex justify-center gap-4 my-8">
        {['Food', 'Snack', 'Beverage'].map(cat => (
          <button
@@ -160,7 +156,6 @@ export default function Page() {
                    className="mx-auto" 
                    width={150} 
                    height={150}
-                   // For external images, you need to configure the domain in next.config.js
                  />
                  <h3 className="text-lg font-bold mt-4">{item.name}</h3>
                  <p className="text-sm text-gray-400">{item.desc}</p>

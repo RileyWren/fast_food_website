@@ -109,11 +109,6 @@ export default function MenuGrid() {
         <p className="max-w-xl mx-auto text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
-        {/* <div className="flex justify-center gap-4 my-8">
-          <button className="bg-yellow-400 text-black font-semibold py-2 px-4 rounded">Food</button>
-          <button className="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded">Snack</button>
-          <button className="bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded">Beverage</button>
-        </div> */}
         <div className="flex justify-center gap-4 my-8">
   {['Food', 'Snack', 'Beverage'].map(cat => (
     <button
