@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Navbar from '../components/Navbar.jsx';
 
-export default function AboutSection() {
+export default function Page() {
   return (
     <div className="bg-black text-white">
       {/* Top Section with Background Image */}

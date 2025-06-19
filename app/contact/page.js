@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Navbar from '../components/Navbar.jsx';
 import { Mail, MapPin, Phone, Clock } from 'lucide-react'
 import Footer from '../components/Footer.jsx';
-export default function page() {
+export default function Page() {
   return (
     <div className="bg-black text-white">
       {/* Top Section with Background Image */}
@@ -47,7 +47,7 @@ export default function page() {
               <MapPin className="text-yellow-500 mt-1" />
               <div>
                 <p className="font-bold uppercase">Location</p>
-                <p>Jl. Pantai Kuta No.34, Badung, Bali</p>
+                <p>Australia, adalaide</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -61,7 +61,7 @@ export default function page() {
               <Phone className="text-yellow-500 mt-1" />
               <div>
                 <p className="font-bold uppercase">Phone</p>
-                <p>+62831–2864–3491</p>
+                <p>+0123456789</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

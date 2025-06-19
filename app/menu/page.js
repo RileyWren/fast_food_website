@@ -94,7 +94,7 @@ import Footer from '../components/Footer.jsx';
   },
 ];
 
-export default function page() {
+export default function Page() {
  
    const [selectedCategory, setSelectedCategory] = useState('Food');
 
