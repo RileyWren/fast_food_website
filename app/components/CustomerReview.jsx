@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -36,26 +35,57 @@ const CustomerReview = () => {
   return (
     <section className="bg-zinc-900 text-white py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold uppercase mb-4">Customer Review</h2>
-        <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
-        <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        </p>
+        {/* Heading + underline + subtext */}
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold uppercase mb-4"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Customer Review
+        </motion.h2>
 
+        <motion.div
+          className="w-24 h-1 bg-yellow-500 mx-auto mb-6"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          style={{ transformOrigin: 'left' }}
+        />
+
+        <motion.p
+          className="text-gray-300 mb-12 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        </motion.p>
+
+        {/* Review cards with staggered on-scroll animation */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((review) => (
+          {reviews.map((review, index) => (
             <motion.div
               key={review.id}
               className="bg-zinc-800 rounded-lg p-6 flex flex-col justify-between shadow-md hover:scale-105 transition-transform duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
-              viewport={{ once: true }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: 'easeOut',
+              }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <p className="text-gray-200 mb-6">{review.text}</p>
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg ${review.color}`}>
+                  <div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg ${review.color}`}
+                  >
                     {review.initials}
                   </div>
                   <div>

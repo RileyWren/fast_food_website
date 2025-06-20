@@ -1,9 +1,10 @@
 
 
-"use client";
+'use client';
 
 import { useState } from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const products = [
   {
@@ -93,14 +94,13 @@ const products = [
 ];
 
 
-
-
 export default function MenuGrid() {
-     const [selectedCategory, setSelectedCategory] = useState('Food');
+  const [selectedCategory, setSelectedCategory] = useState('Food');
 
   const filteredProducts = products.filter(
     item => item.category === selectedCategory
   );
+
   return (
     <div className="bg-black text-white py-12 px-6">
       <div className="text-center">
@@ -109,39 +109,45 @@ export default function MenuGrid() {
         <p className="max-w-xl mx-auto text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
+
         <div className="flex justify-center gap-4 my-8">
-  {['Food', 'Snack', 'Beverage'].map(cat => (
-    <button
-      key={cat}
-      onClick={() => setSelectedCategory(cat)}
-      className={`py-2 px-4 rounded font-semibold ${
-        selectedCategory === cat
-          ? 'bg-yellow-400 text-black'
-          : 'bg-gray-800 hover:bg-gray-700 text-white'
-      }`}
-    >
-      {cat}
-    </button>
-  ))}
-</div>
+          {['Food', 'Snack', 'Beverage'].map(cat => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`py-2 px-4 rounded font-semibold ${
+                selectedCategory === cat
+                  ? 'bg-yellow-400 text-black'
+                  : 'bg-gray-800 hover:bg-gray-700 text-white'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {/* {products.map((item, idx) => ( */}
         {filteredProducts.map((item, idx) => (
-          <div key={idx} className="bg-gray-900 p-4 rounded-xl text-center">
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.1, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="bg-gray-900 p-4 rounded-xl text-center"
+          >
             <Image 
               src={item.img} 
               alt={item.name} 
               className="mx-auto" 
               width={150} 
               height={150}
-              // For external images, you need to configure the domain in next.config.js
             />
             <h3 className="text-lg font-bold mt-4">{item.name}</h3>
             <p className="text-sm text-gray-400">{item.desc}</p>
             <p className="text-yellow-400 font-bold text-lg mt-2">{item.price}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

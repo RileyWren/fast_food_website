@@ -11,19 +11,6 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
         </div>
-
-        {/* Section 2: Support */}
-        <div>
-          <h3 className="text-xl font-bold text-yellow-500 mb-4">SUPPORT</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li><a href="#" className="hover:text-yellow-500 transition-colors duration-200">FAQ's</a></li>
-            <li><a href="#" className="hover:text-yellow-500 transition-colors duration-200">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-yellow-500 transition-colors duration-200">Term & Conditions</a></li>
-            <li><a href="#" className="hover:text-yellow-500 transition-colors duration-200">Contact</a></li>
-          </ul>
-        </div>
-
-        {/* Section 3: Phone & Email */}
         <div>
           <h3 className="text-xl font-bold text-yellow-500 mb-4">PHONE</h3>
           <p className="flex items-center text-gray-400 text-sm mb-6">
@@ -52,27 +39,6 @@ const Footer = () => {
             </svg>
             los angle usa
           </p>
-
-          <h3 className="text-xl font-bold text-yellow-500 mb-4">FOLLOW US</h3>
-          <div className="flex space-x-4">
-            {/* Facebook */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3 8h-2v4h2v6h-4v-6h-2V8h2V6a3 3 0 013-3h3v5z"/></svg>
-            </a>
-            {/* Twitter */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.707 7.707a.999.999 0 01-1.414 0l-3.293-3.293a.999.999 0 010-1.414.999.999 0 011.414 0l3.293 3.293a.999.999 0 010 1.414zM12 4a8 8 0 00-8 8c0 1.62.484 3.125 1.317 4.394l.872.872a.999.999 0 01-.137 1.34c-.812.811-1.742 1.403-2.732 1.634a.999.999 0 01-1.127-1.492.999.999 0 01.129-.115l.872-.872A9.957 9.957 0 0112 22a9.958 9.958 0 01-5.719-1.89l-.872-.872a.999.999 0 01-.137-1.34c.812-.811 1.742-1.403 2.732-1.634a.999.999 0 011.127 1.492.999.999 0 01-.129.115l-.872.872A8 8 0 0012 20a8 8 0 008-8V4z"/></svg>
-            </a>
-            {/* Instagram */}
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.707 5.707a.999.999 0 010 1.414L11.414 14.414a.999.999 0 01-1.414 0l-2.293-2.293a.999.999 0 011.414-1.414L10 12.586l3.293-3.293a.999.999 0 011.414 0zM12 4a8 8 0 00-8 8 8 8 0 008 8 8 8 0 008-8 8 8 0 00-8-8zm0 12a4 4 110-8 4 4 0 000 8z"/></svg>
-            </a>
-            <a href="#" className="text-yellow-500 hover:text-white transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.538 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.783.57-1.838-.197-1.538-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.92 8.72a1 1 0 01.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z" />
-              </svg>
-            </a>
-          </div>
         </div>
       </div>
 

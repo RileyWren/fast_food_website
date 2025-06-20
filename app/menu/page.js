@@ -95,77 +95,104 @@ import Footer from '../components/Footer.jsx';
 ];
 
 export default function Page() {
- 
-   const [selectedCategory, setSelectedCategory] = useState('Food');
+  const [selectedCategory, setSelectedCategory] = useState('Food');
 
   const filteredProducts = products.filter(
     item => item.category === selectedCategory
   );
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    
     <div className="bg-black text-white">
       {/* Top Section with Background Image */}
       <Navbar />
       <div className="relative w-full h-[400px] bottom-20 flex items-center justify-center text-center">
         <Image
-          src="/background_burger.png" // 
+          src="/background_burger.png"
           alt="Background"
           fill
           className="object-cover opacity-70"
         />
-        <div className="relative z-10 max-w-3xl px-4">
-          <h2 className="text-4xl font-extrabold mb-4">
-            Menu
-          </h2>
+        <motion.div
+          className="relative z-10 max-w-3xl px-4"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.7 }}
+          variants={fadeUp}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h2 className="text-4xl font-extrabold mb-4">Menu</h2>
           <div className="w-16 h-1 bg-yellow-400 mx-auto mb-4" />
           <p className="text-gray-300">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
           </p>
-        </div>
+        </motion.div>
       </div>
 
-     {/* Menu section */}
-         <div className="bg-black text-white py-12 px-6">
-           <div className="text-center">
-             <div className="w-16 h-1 bg-yellow-400 mx-auto mt-2 mb-6"></div>
-   
-             <div className="flex justify-center gap-4 my-8">
-       {['Food', 'Snack', 'Beverage'].map(cat => (
-         <button
-           key={cat}
-           onClick={() => setSelectedCategory(cat)}
-           className={`py-2 px-4 rounded font-semibold ${
-             selectedCategory === cat
-               ? 'bg-yellow-400 text-black'
-               : 'bg-neutral-900 hover:bg-gray-700 text-white'
-           }`}
-         >
-           {cat}
-         </button>
-       ))}
-     </div>
-           </div>
-     
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-             {/* {products.map((item, idx) => ( */}
-             {filteredProducts.map((item, idx) => (
-               <div key={idx} className="bg-neutral-900 p-4 rounded-xl text-center">
-                 <Image 
-                   src={item.img} 
-                   alt={item.name} 
-                   className="mx-auto" 
-                   width={150} 
-                   height={150}
-                 />
-                 <h3 className="text-lg font-bold mt-4">{item.name}</h3>
-                 <p className="text-sm text-gray-400">{item.desc}</p>
-                 <p className="text-yellow-400 font-bold text-lg mt-2">{item.price}</p>
-               </div>
-             ))}
-           </div>
-         </div>
-             <TopProduct />
-             <Footer />
+      {/* Menu section */}
+      <div className="bg-black text-white py-12 px-6">
+        <motion.div
+          className="text-center"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          variants={fadeUp}
+          viewport={{ once: true }}
+        >
+          <div className="w-16 h-1 bg-yellow-400 mx-auto mt-2 mb-6" />
+          <div className="flex justify-center gap-4 my-8">
+            {['Food', 'Snack', 'Beverage'].map((cat) => (
+              <motion.button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`py-2 px-4 rounded font-semibold ${
+                  selectedCategory === cat
+                    ? 'bg-yellow-400 text-black'
+                    : 'bg-neutral-900 hover:bg-gray-700 text-white'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                {cat}
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.15 }}
+        >
+          {filteredProducts.map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-neutral-900 p-4 rounded-xl text-center"
+              variants={fadeUp}
+            >
+              <Image
+                src={item.img}
+                alt={item.name}
+                className="mx-auto"
+                width={150}
+                height={150}
+              />
+              <h3 className="text-lg font-bold mt-4">{item.name}</h3>
+              <p className="text-sm text-gray-400">{item.desc}</p>
+              <p className="text-yellow-400 font-bold text-lg mt-2">{item.price}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <TopProduct />
+      <Footer />
     </div>
   );
 }

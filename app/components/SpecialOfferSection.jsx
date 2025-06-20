@@ -20,7 +20,13 @@ const SpecialOfferSection = () => {
   };
 
   return (
-    <section className="relative h-[700px] sm:mb-70 bg-cover bg-center" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/people-have-dinner-together-table-cafe-happy-friends-eat-burgers-have-fun_199620-8406.jpg')" }}>
+    <section
+      className="relative h-[700px] sm:mb-70 bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://img.freepik.com/premium-photo/people-have-dinner-together-table-cafe-happy-friends-eat-burgers-have-fun_199620-8406.jpg')",
+      }}
+    >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
@@ -28,7 +34,8 @@ const SpecialOfferSection = () => {
         className="relative z-10 flex flex-col items-start justify-center h-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h1
           className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4"
