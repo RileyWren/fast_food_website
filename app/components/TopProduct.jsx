@@ -1,10 +1,11 @@
-
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import burger3 from '../../public/burger3.webp'
 import coke from '../../public/coke.webp'
 import fries from '../../public/fries.png'
+import { motion } from 'framer-motion'
 
 const products = [
   {
@@ -25,8 +26,12 @@ const TopProduct = () => {
   return (
     <section className="flex flex-col md:flex-row gap-6 px-4 py-8 md:px-16">
       {products.map((product, index) => (
-        <div
+        <motion.div
           key={index}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: index * 0.2, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.3 }}
           className={`flex flex-col md:flex-row items-center md:items-stretch rounded-2xl ${product.bg} overflow-hidden shadow-lg transition hover:scale-[1.01] w-full md:w-1/2`}
         >
           <div className="w-full md:w-1/2 h-64 md:h-auto relative">
@@ -52,7 +57,7 @@ const TopProduct = () => {
               Buy Online →
             </Link>
           </div>
-        </div>
+        </motion.div>
       ))}
     </section>
   )

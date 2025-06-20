@@ -1,12 +1,39 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import burger from '../../public/burger5.webp' // replace with your image
+import burger from '../../public/burger5.webp'
+import { motion } from 'framer-motion'
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -50 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+}
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 50 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+}
+
+const itemFade = {
+  hidden: { opacity: 0, y: 20 },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6 }
+  })
+}
 
 const HeroSplit = () => {
   return (
     <section className="flex flex-col md:flex-row items-center bg-black px-4 md:px-16 py-12 gap-8">
       {/* LEFT IMAGE */}
-      <div className="w-full md:w-1/2 rounded-xl overflow-hidden">
+      <motion.div
+        className="w-full md:w-1/2 rounded-xl overflow-hidden"
+        variants={fadeLeft}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <Image
           src={burger}
           alt="Burger Promo"
@@ -14,10 +41,16 @@ const HeroSplit = () => {
           width={600}
           height={400}
         />
-      </div>
+      </motion.div>
 
       {/* RIGHT CONTENT */}
-      <div className="w-full md:w-1/2 text-white">
+      <motion.div
+        className="w-full md:w-1/2 text-white"
+        variants={fadeRight}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
           Find Your Best Tasted Food & Drink Just In One Place
         </h1>
@@ -32,28 +65,41 @@ const HeroSplit = () => {
 
         {/* FEATURES GRID */}
         <div className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-200 mb-6">
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400">✔</span> Best Price
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400">✔</span> Best Service
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400">✔</span> Fresh Ingredient
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400">✔</span> Health Protocol
-          </div>
+          {[
+            'Best Price',
+            'Best Service',
+            'Fresh Ingredient',
+            'Health Protocol'
+          ].map((text, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={itemFade}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.4 }}
+              className="flex items-center gap-2"
+            >
+              <span className="text-yellow-400">✔</span> {text}
+            </motion.div>
+          ))}
         </div>
 
         {/* BUTTON */}
-        <Link
-          href="/about"
-          className="bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold hover:bg-yellow-500 transition"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
-          About Us
-        </Link>
-      </div>
+          <Link
+            href="/about"
+            className="bg-yellow-400 text-black px-6 py-2 rounded-md font-semibold hover:bg-yellow-500 transition"
+          >
+            About Us
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

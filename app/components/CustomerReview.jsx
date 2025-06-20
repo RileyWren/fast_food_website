@@ -1,5 +1,9 @@
+
+'use client';
+
 import React from 'react';
 import { FaQuoteRight } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const reviews = [
   {
@@ -40,7 +44,14 @@ const CustomerReview = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review) => (
-            <div key={review.id} className="bg-zinc-800 rounded-lg p-6 flex flex-col justify-between shadow-md hover:scale-105 transition-transform duration-300">
+            <motion.div
+              key={review.id}
+              className="bg-zinc-800 rounded-lg p-6 flex flex-col justify-between shadow-md hover:scale-105 transition-transform duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
               <p className="text-gray-200 mb-6">{review.text}</p>
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-3">
@@ -54,7 +65,7 @@ const CustomerReview = () => {
                 </div>
                 <FaQuoteRight className="text-yellow-400 text-2xl" />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

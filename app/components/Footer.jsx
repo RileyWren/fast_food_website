@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
         {/* Section 1: Logo and Description */}
         <div className="flex flex-col">
@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
 
       {/* Horizontal Line */}
-      <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+      <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500 text-center">
         <p className="mb-2 sm:mb-0">Created by Riley</p>
         <p>Copyright © 2025. All rights reserved.</p>
       </div>
